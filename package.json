@@ -1,0 +1,25 @@
+{
+  "name": "jayaprakash1910.github.io",
+  "version": "1.0.0",
+  "description": "Test Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayaprakash1910/jayaprakash1910.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jayaprakash1910/jayaprakash1910.github.io/issues"
+  },
+  "homepage": "https://github.com/jayaprakash1910/jayaprakash1910.github.io#readme",
+  "dependencies": {
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^6.3.289"
+  }
+}

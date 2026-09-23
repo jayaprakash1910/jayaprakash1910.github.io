@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jaya Prakash Gadela is an Investment Advisor and Fiduciary based in McKinney, Texas.">
+  <title>Jaya Prakash Gadela | Investment Advisor &amp; Fiduciary</title>
+  <style>
+    :root {
+      --black: #0b0c0b;
+      --black-soft: #121412;
+      --gold: #c9a45d;
+      --gold-light: #e4c985;
+      --cream: #f5f1e8;
+      --muted: #a7a49b;
+      --line: rgba(228, 201, 133, .23);
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "Avenir Next", Avenir, "Helvetica Neue", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--cream); background: var(--black); font-family: var(--sans); line-height: 1.6; }
+    body, button, a { -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+    .wrap { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+
+    .announcement { padding: 11px 20px; color: var(--black); background: var(--gold); font-size: 10px; font-weight: 800; letter-spacing: .16em; text-align: center; text-transform: uppercase; }
+    header { border-bottom: 1px solid var(--line); background: rgba(11, 12, 11, .96); }
+    .nav { display: flex; align-items: center; justify-content: space-between; min-height: 82px; }
+    .brand { color: var(--cream); font-family: var(--serif); font-size: 22px; text-decoration: none; }
+    .brand span { color: var(--gold); }
+    nav { display: flex; align-items: center; gap: 30px; }
+    nav a { color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-decoration: none; text-transform: uppercase; }
+    nav a:hover { color: var(--gold-light); }
+    .nav-cta { padding: 11px 17px; color: var(--black); background: var(--gold); }
+    .nav-cta:hover { color: var(--black); background: var(--gold-light); }
+
+    .hero { position: relative; overflow: hidden; padding: 122px 0 142px; background: radial-gradient(circle at 78% 28%, rgba(201, 164, 93, .13), transparent 25%), linear-gradient(135deg, #0b0c0b 0%, #131713 55%, #0b0c0b 100%); }
+    .hero::after { position: absolute; right: -80px; bottom: -220px; width: 620px; height: 620px; border: 1px solid rgba(201, 164, 93, .18); border-radius: 50%; content: ""; box-shadow: 0 0 0 36px rgba(201, 164, 93, .03), 0 0 0 72px rgba(201, 164, 93, .025); }
+    .hero-content { position: relative; z-index: 1; max-width: 840px; }
+    .kicker, .section-kicker { margin: 0 0 23px; color: var(--gold-light); font-size: 11px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 800px; margin-bottom: 28px; font-family: var(--serif); font-size: clamp(3.4rem, 8vw, 7.4rem); font-weight: 400; letter-spacing: -.06em; line-height: .92; }
+    .hero-lede { max-width: 560px; margin-bottom: 40px; color: #d0cdc4; font-size: 18px; }
+    .button { display: inline-flex; align-items: center; gap: 15px; padding: 15px 20px; color: var(--black); background: var(--gold); font-size: 11px; font-weight: 800; letter-spacing: .12em; text-decoration: none; text-transform: uppercase; }
+    .button::after { content: "→"; font-size: 18px; line-height: 0; }
+    .button:hover { background: var(--gold-light); }
+    .hero-meta { display: flex; gap: 44px; margin-top: 82px; padding-top: 22px; border-top: 1px solid var(--line); }
+    .hero-meta strong, .contact-list strong { display: block; color: var(--gold-light); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
+    .hero-meta span { display: block; margin-top: 5px; color: var(--muted); font-size: 13px; }
+
+    .section-light { color: var(--black); background: var(--cream); }
+    .intro { display: grid; grid-template-columns: .75fr 1.25fr; gap: 90px; padding: 118px 0 124px; }
+    .section-kicker.dark { color: #80652f; }
+    h2 { margin-bottom: 24px; font-family: var(--serif); font-size: clamp(2.5rem, 5vw, 5rem); font-weight: 400; letter-spacing: -.055em; line-height: .98; }
+    .intro h2 { max-width: 400px; }
+    .intro-copy { max-width: 620px; padding-top: 36px; }
+    .intro-copy p { margin-bottom: 25px; font-size: 18px; line-height: 1.75; }
+    .intro-copy p:last-child { color: #68665e; font-size: 15px; }
+
+    .services { padding: 108px 0 120px; }
+    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 48px; }
+    .section-heading h2 { max-width: 590px; margin-bottom: 0; }
+    .section-heading > p { max-width: 250px; margin-bottom: 5px; color: var(--muted); font-size: 14px; }
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .service { min-height: 315px; padding: 28px; background: var(--black-soft); }
+    .service-number { color: var(--gold); font-size: 12px; font-weight: 800; letter-spacing: .13em; }
+    .service h3 { margin: 92px 0 13px; font-family: var(--serif); font-size: 29px; font-weight: 400; line-height: 1; }
+    .service p { max-width: 270px; margin-bottom: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+
+    .process { padding: 112px 0 120px; border-top: 1px solid var(--line); }
+    .process h2 { max-width: 550px; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 35px; margin-top: 62px; }
+    .step { padding-top: 18px; border-top: 1px solid var(--line); }
+    .step-number { color: var(--gold); font-size: 13px; font-weight: 800; letter-spacing: .13em; }
+    .step h3 { margin: 42px 0 12px; font-family: var(--serif); font-size: 26px; font-weight: 400; }
+    .step p { max-width: 280px; margin: 0; color: var(--muted); font-size: 14px; }
+
+    .quote { padding: 112px 0 120px; color: var(--black); background: var(--gold); }
+    .quote blockquote { max-width: 900px; margin: 0; font-family: var(--serif); font-size: clamp(2rem, 4.5vw, 4.4rem); letter-spacing: -.045em; line-height: 1.06; }
+    .quote cite { display: block; margin-top: 34px; font-family: var(--sans); font-size: 11px; font-style: normal; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+
+    .faq { color: var(--black); background: var(--cream); padding: 112px 0 120px; }
+    .faq-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 100px; }
+    .faq h2 { max-width: 360px; }
+    details { padding: 22px 0; border-top: 1px solid #d4d0c5; }
+    details:last-child { border-bottom: 1px solid #d4d0c5; }
+    summary { display: flex; justify-content: space-between; gap: 20px; cursor: pointer; list-style: none; font-family: var(--serif); font-size: 21px; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { color: #80652f; content: "+"; font-family: var(--sans); font-size: 24px; font-weight: 300; }
+    details[open] summary::after { content: "−"; }
+    details p { max-width: 590px; margin: 13px 35px 0 0; color: #68665e; font-size: 14px; }
+
+    .structured-notes { padding: 110px 0 120px; background: linear-gradient(180deg, #f5f1e8 0%, #efe7d7 100%); color: var(--black); }
+    .notes-shell { display: grid; gap: 26px; }
+    .notes-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .notes-header h2 { margin-bottom: 0; }
+    .admin-login { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .admin-login input { min-width: 220px; padding: 11px 14px; border: 1px solid rgba(11, 12, 11, .2); background: rgba(255, 255, 255, .75); font: inherit; }
+    .admin-login button, .upload-button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 22px; background: var(--black); color: var(--cream); border: 1px solid var(--black); cursor: pointer; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; font-weight: 800; transition: background .2s ease, color .2s ease; }
+    .admin-login button:hover, .upload-button:hover { background: transparent; color: var(--black); }
+    .notes-panel { position: relative; min-height: 700px; padding: 18px; border: 1px solid rgba(11, 12, 11, .12); background: rgba(255, 255, 255, .38); }
+    .empty-state { display: flex; align-items: center; justify-content: center; min-height: 650px; margin: 0; color: #68665e; font-size: 18px; text-align: center; }
+    .pdf-frame-wrap { display: none; width: 100%; min-height: 700px; background: #fff; }
+    #pdf-viewer { display: block; width: 100%; min-height: 700px; border: 0; background: #fff; }
+    .admin-note { margin: 0; color: #5f5c57; font-size: 13px; }
+    .hidden { display: none !important; }
+
+    footer { padding: 100px 0 30px; background: var(--black); }
+    .footer-top { display: grid; grid-template-columns: 1.2fr .8fr; gap: 70px; padding-bottom: 95px; }
+    footer h2 { max-width: 660px; margin-bottom: 0; }
+    .contact-list { padding-top: 8px; }
+    .contact-list p { margin-bottom: 22px; color: var(--muted); font-size: 14px; }
+    .contact-list strong { margin-bottom: 3px; }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 21px; border-top: 1px solid var(--line); color: #74746e; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+
+    @media (max-width: 700px) {
+      .wrap { width: calc(100% - 36px); }
+      .announcement { padding: 10px 15px; font-size: 8px; letter-spacing: .12em; }
+      .nav { min-height: 72px; }
+      nav { gap: 15px; }
+      nav a { font-size: 9px; letter-spacing: .09em; }
+      .nav-cta { display: none; }
+      .brand { font-size: 18px; }
+      .hero { padding: 83px 0 78px; }
+      h1 { font-size: clamp(3.5rem, 17vw, 6rem); }
+      .hero-lede { font-size: 16px; }
+      .hero-meta { gap: 18px; margin-top: 60px; }
+      .hero-meta span { font-size: 11px; }
+      .intro, .faq-layout, .footer-top { display: block; padding: 78px 0 84px; }
+      .intro-copy { padding-top: 10px; }
+      .intro-copy p { font-size: 16px; }
+      .services, .process, .faq { padding: 78px 0 84px; }
+      .section-heading { display: block; margin-bottom: 34px; }
+      .section-heading > p { margin-top: 16px; }
+      .service-grid, .steps { grid-template-columns: 1fr; }
+      .service { min-height: 245px; }
+      .service h3 { margin-top: 58px; }
+      .steps { gap: 30px; margin-top: 40px; }
+      .step h3 { margin-top: 26px; }
+      .quote { padding: 80px 0 88px; }
+      .faq-layout { padding-top: 0; }
+      .faq-layout > div:first-child { margin-bottom: 45px; }
+      .footer-top { padding-bottom: 70px; }
+      footer h2 { margin-bottom: 52px; }
+      .footer-bottom { flex-direction: column; gap: 10px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <div class="announcement">Thoughtful advice for the long view · McKinney, Texas</div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">Jaya Prakash <span>Gadela</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a><a href="#services">Approach</a><a href="#faq">FAQ</a><a class="nav-cta" href="#contact">Connect</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-content">
+        <p class="kicker">Investment Advisor · Fiduciary</p>
+        <h1>A steadier way to build your financial future.</h1>
+        <p class="hero-lede">Clarity for the decisions that shape your life, and a disciplined investment perspective for the years ahead.</p>
+        <a class="button" href="#contact">Start a conversation</a>
+        <div class="hero-meta"><div><strong>01</strong><span>Listen first</span></div><div><strong>02</strong><span>Plan with purpose</span></div><div><strong>03</strong><span>Stay the course</span></div></div>
+      </div>
+    </section>
+
+    <section class="section-light" id="about">
+      <div class="wrap intro">
+        <div><p class="section-kicker dark">A personal approach</p><h2>Good advice starts with a real understanding of you.</h2></div>
+        <div class="intro-copy"><p>I help people make more confident decisions about their financial future. That starts with listening closely, asking better questions, and making complexity easier to see.</p><p>As an Investment Advisor and Fiduciary based in McKinney, Texas, I bring an independent perspective to each relationship. Your goals, responsibilities, and definition of a meaningful future should shape the strategy.</p></div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="section-kicker">What I help with</p><h2>Financial direction, made personal.</h2></div><p>A considered process for turning the important questions into a clear next step.</p></div>
+        <div class="service-grid"><article class="service"><span class="service-number">01</span><h3>Wealth<br>planning</h3><p>Connect your financial moving parts to the life you want to lead.</p></article><article class="service"><span class="service-number">02</span><h3>Investment<br>strategy</h3><p>Build a disciplined portfolio designed around your goals and time horizon.</p></article><article class="service"><span class="service-number">03</span><h3>Fiduciary<br>guidance</h3><p>Receive advice grounded in your best interests, through every season.</p></article></div>
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="wrap"><p class="section-kicker">A clear process</p><h2>From uncertainty to a plan you can live with.</h2><div class="steps"><div class="step"><span class="step-number">01</span><h3>Understand</h3><p>We begin with your story, priorities, and the questions that keep you thinking.</p></div><div class="step"><span class="step-number">02</span><h3>Design</h3><p>We shape a practical strategy that reflects your goals and your comfort with risk.</p></div><div class="step"><span class="step-number">03</span><h3>Navigate</h3><p>We revisit the plan as life changes, keeping decisions deliberate and connected.</p></div></div></div>
+    </section>
+
+    <section class="quote"><div class="wrap"><blockquote>“The goal is not to predict every turn. It is to prepare thoughtfully for the road ahead.”</blockquote><cite>Jaya Prakash Gadela · Investment Advisor &amp; Fiduciary</cite></div></section>
+
+    <section class="faq" id="faq"><div class="wrap faq-layout"><div><p class="section-kicker dark">Questions worth asking</p><h2>Start with what’s on your mind.</h2></div><div><details open><summary>What does a fiduciary do?</summary><p>A fiduciary is expected to put a client’s interests first and offer advice with care, loyalty, and transparency.</p></details><details><summary>Who do you work with?</summary><p>People and families who want a thoughtful partner for important financial decisions and long-term investing.</p></details><details><summary>What happens in a first conversation?</summary><p>We talk about where you are, what you are working toward, and whether my approach is a good fit for your needs.</p></details></div></div></section>
+
+    <section class="structured-notes" aria-labelledby="structured-notes-title">
+      <div class="wrap notes-shell">
+        <div class="notes-header">
+          <div>
+            <p class="section-kicker dark">Document center</p>
+            <h2 id="structured-notes-title">Structured Notes</h2>
+          </div>
+          <div class="admin-login" id="admin-login-wrap">
+            <input id="admin-password" type="password" aria-label="Admin password" placeholder="Admin password" />
+            <button id="admin-login-button" type="button">Admin access</button>
+          </div>
+          <div id="upload-controls" class="hidden">
+            <label class="upload-button" for="pdf-upload">Upload PDF</label>
+            <input id="pdf-upload" type="file" accept="application/pdf" hidden>
+          </div>
+        </div>
+        <p class="admin-note">Uploaded PDFs stay visible for 7 days or until a new PDF replaces the current one.</p>
+        <div class="notes-panel">
+          <p class="empty-state" id="notes-empty">No PDF uploaded yet.</p>
+          <div class="pdf-frame-wrap" id="pdf-frame-wrap">
+            <iframe id="pdf-viewer" title="Structured Notes PDF viewer" aria-label="Uploaded PDF preview"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact"><div class="wrap"><div class="footer-top"><div><p class="section-kicker">Let’s talk</p><h2>A more considered financial future starts with one conversation.</h2></div><div class="contact-list"><p><strong>Jaya Prakash Gadela</strong>Investment Advisor &amp; Fiduciary</p><p><strong>Based in</strong>McKinney, Texas</p><p><strong>Availability</strong>By appointment</p></div></div><div class="footer-bottom"><span>© <span id="year">2026</span> Jaya Prakash Gadela</span><span>Thoughtful advice for the long view</span></div></div></footer>
+  <script type="module">
+    import { PDFDocument, StandardFonts, rgb, degrees } from './node_modules/pdf-lib/dist/pdf-lib.esm.min.js';
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const ADMIN_PASSWORD = 'jpfinancials';
+    const STORAGE_KEY = 'structured-notes-pdf-state';
+    const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000;
+    const watermarkText = 'Financial advisor use only, not for public use';
+
+    const adminPassword = document.getElementById('admin-password');
+    const adminLoginButton = document.getElementById('admin-login-button');
+    const uploadControls = document.getElementById('upload-controls');
+    const pdfUpload = document.getElementById('pdf-upload');
+    const pdfFrameWrap = document.getElementById('pdf-frame-wrap');
+    const pdfViewer = document.getElementById('pdf-viewer');
+    const notesEmpty = document.getElementById('notes-empty');
+
+    function clearPersistedPdf() {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+
+    function readStoredPdfState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return null;
+
+        const parsed = JSON.parse(raw);
+        if (!parsed || !parsed.dataUrl || !parsed.expiresAt) return null;
+
+        if (Date.now() > parsed.expiresAt) {
+          clearPersistedPdf();
+          return null;
+        }
+
+        return parsed;
+      } catch (error) {
+        console.error('Stored PDF state could not be read:', error);
+        clearPersistedPdf();
+        return null;
+      }
+    }
+
+    function savePdfState(dataUrl) {
+      const expiry = Date.now() + SEVEN_DAYS_MS;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ dataUrl, expiresAt: expiry }));
+    }
+
+    function showEmptyState(message = 'No PDF uploaded yet.') {
+      notesEmpty.textContent = message;
+      notesEmpty.style.display = 'flex';
+      pdfFrameWrap.style.display = 'none';
+    }
+
+    function showPdfViewer(dataUrl) {
+      pdfViewer.src = dataUrl;
+      notesEmpty.style.display = 'none';
+      pdfFrameWrap.style.display = 'block';
+    }
+
+    function renderStoredPdfIfAvailable() {
+      const stored = readStoredPdfState();
+      if (!stored) {
+        showEmptyState();
+        return;
+      }
+
+      showPdfViewer(stored.dataUrl);
+    }
+
+    async function stampWatermarkIntoPdf(file) {
+      const bytes = await file.arrayBuffer();
+      const pdfDoc = await PDFDocument.load(bytes);
+      const helvetica = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
+      const pages = pdfDoc.getPages();
+
+      pages.forEach((page) => {
+        const { width, height } = page.getSize();
+        const fontSize = 24;
+        const textWidth = helvetica.widthOfTextAtSize(watermarkText, fontSize);
+
+        page.drawText(watermarkText, {
+          x: (width - textWidth) / 2,
+          y: height / 2,
+          size: fontSize,
+          font: helvetica,
+          color: rgb(0.7, 0.7, 0.7),
+          opacity: 0.35,
+          rotate: degrees(-45),
+        });
+      });
+
+      const stampedBytes = await pdfDoc.save();
+      const blob = new Blob([stampedBytes], { type: 'application/pdf' });
+      const dataUrl = await new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = reject;
+        reader.readAsDataURL(blob);
+      });
+
+      return dataUrl;
+    }
+
+    adminLoginButton.addEventListener('click', () => {
+      const enteredPassword = adminPassword.value.trim();
+      if (enteredPassword === ADMIN_PASSWORD) {
+        uploadControls.classList.remove('hidden');
+        adminPassword.value = '';
+        adminPassword.placeholder = 'Admin unlocked';
+        adminPassword.disabled = true;
+        adminLoginButton.disabled = true;
+      } else {
+        adminPassword.value = '';
+        adminPassword.placeholder = 'Wrong password';
+      }
+    });
+
+    pdfUpload.addEventListener('change', async function (event) {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+
+      const fileName = file.name.toLowerCase();
+      if (file.type !== 'application/pdf' && !fileName.endsWith('.pdf')) {
+        showEmptyState('Please choose a valid PDF file.');
+        return;
+      }
+
+      try {
+        const stampedDataUrl = await stampWatermarkIntoPdf(file);
+        showPdfViewer(stampedDataUrl);
+        savePdfState(stampedDataUrl);
+      } catch (error) {
+        console.error('Watermarking failed:', error);
+        showEmptyState('Unable to watermark that PDF. Please try another file.');
+      }
+    });
+
+    renderStoredPdfIfAvailable();
+  </script>
+</body>
+</html>
