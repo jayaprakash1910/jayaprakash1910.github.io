@@ -221,8 +221,9 @@
   </main>
 
   <footer id="contact"><div class="wrap"><div class="footer-top"><div><p class="section-kicker">Let’s talk</p><h2>A more considered financial future starts with one conversation.</h2></div><div class="contact-list"><p><strong>Jaya Prakash Gadela</strong>Investment Advisor &amp; Fiduciary</p><p><strong>Based in</strong>McKinney, Texas</p><p><strong>Availability</strong>By appointment</p></div></div><div class="footer-bottom"><span>© <span id="year">2026</span> Jaya Prakash Gadela</span><span>Thoughtful advice for the long view</span></div></div></footer>
-  <script type="module">
-    import { PDFDocument, StandardFonts, rgb, degrees } from './node_modules/pdf-lib/dist/pdf-lib.esm.min.js';
+  <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+  <script>
+    const { PDFDocument, StandardFonts, rgb, degrees } = PDFLib;
 
     document.getElementById('year').textContent = new Date().getFullYear();
 
